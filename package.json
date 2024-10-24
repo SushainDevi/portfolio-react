@@ -3,10 +3,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "remix vite:build",
-    "dev": "node ./scripts/dev.cjs && remix vite:dev",
+    "build": "./node_modules/.bin/remix build && ./node_modules/.bin/vite build",
+    "dev": "node ./scripts/dev.cjs && ./node_modules/.bin/remix dev",
     "start": "wrangler pages dev ./build/client",
-    "postinstall": "node ./scripts/draco.cjs",
+    "postinstall": "node ./scripts/draco.cjs && chmod +x ./node_modules/.bin/remix && chmod +x ./node_modules/.bin/vite",
     "deploy": "npm run build && wrangler pages deploy ./build/client --project-name portfolio",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
