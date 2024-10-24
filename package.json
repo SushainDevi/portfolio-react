@@ -3,10 +3,10 @@
   "sideEffects": false,
   "type": "module",
   "scripts": {
-    "build": "./node_modules/.bin/remix build && ./node_modules/.bin/vite build",
-    "dev": "node ./scripts/dev.cjs && ./node_modules/.bin/remix dev",
+    "build": "remix vite:build",
+    "dev": "node ./scripts/dev.cjs && remix vite:dev",
     "start": "wrangler pages dev ./build/client",
-    "postinstall": "node ./scripts/draco.cjs && chmod +x ./node_modules/.bin/remix && chmod +x ./node_modules/.bin/vite",
+    "postinstall": "node ./scripts/draco.cjs",
     "deploy": "npm run build && wrangler pages deploy ./build/client --project-name portfolio",
     "dev:storybook": "storybook dev -p 6006",
     "build:storybook": "storybook build",
@@ -48,7 +48,6 @@
     "remark-mdx-frontmatter": "^4.0.0",
     "vite": "^5.1.0",
     "vite-jsconfig-paths": "^2.0.1",
-    "vite-plugin-glsl": "^1.0.0",
     "wrangler": "^3.81.0"
   },
   "engines": {
