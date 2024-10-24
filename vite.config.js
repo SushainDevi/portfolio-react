@@ -10,6 +10,7 @@ import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
 import rehypeImgSize from 'rehype-img-size';
 import rehypeSlug from 'rehype-slug';
 import rehypePrism from '@mapbox/rehype-prism';
+import glsl from 'vite-plugin-glsl';
 
 const isStorybook = process.argv[1]?.includes('storybook');
 
@@ -36,5 +37,6 @@ export default defineConfig({
       },
     }),
     jsconfigPaths(),
+    glsl() // Added GLSL plugin here
   ],
 });
