@@ -1,20 +1,11 @@
-# Node.js dependencies
-/node_modules
-!/node_modules/.bin/
+node_modules
 
-# Build output
-/build
-/dist
-
-# Vite and Remix cache folders
 /.cache
-/public/dist
-
-# Allow module-specific CSS files while ignoring general ones
-*.css
-!*.module.css
-
-# Environment and temporary files
+/build
 .env
-.env.local
-.DS_Store
+
+.wrangler
+.dev.vars
+
+public/draco
+storybook-static

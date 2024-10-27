@@ -325,7 +325,7 @@ export function VolkiharKnight() {
           title={title}
           description={description}
           linkLabel="View Demo (SOON)"
-          url="https://www.nexusmods.com/skyrimspecialedition/mods/4806/"
+          url="https://huggingface.co/spaces/deviSushain/MusicRecommendation-SpotifyAPI"
           roles={roles}
         />
         <ProjectSection>
